@@ -17,17 +17,24 @@ package main
  */
 
 import (
-	"fmt"
+	"encoding/json"
 )
 
+type Config struct {
+	Options  map[string]string   `json:improv`
+	Actors   []Actor             `json:actors`
+	Topology map[string][]string `json:topology`
+}
+
+type Actor struct {
+	Name    string            `json:name`
+	Stdin   string            `json:stdin`
+	Code    string            `json:code`
+	Stub    bool              `json:stub`
+	Env     map[string]string `json:env`
+	Args    []string          `json:args`
+	Comment string            `json:comment`
+}
+
 func main() {
-	fmt.Println("Ohai!")
-
-	// load a directory of actors, using only strict file extension
-	// matching to determine which shim to combine them with
-
-	// combine the actors then write them out to a scratch directory 0700
-
-	// fire up a goroutine that will run the code and plumb stdin/stdout
-	// to channels
 }
