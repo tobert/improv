@@ -2,9 +2,9 @@
 
 Improv is an actor system comprised of OS processes that communicate
 over pipes. Improv aims to only provide the infrastructure
-necessary to string together processes. The difference from standard
+necessary to string together processes. The difference from
 shell scripts are that improv topologies are declarative and may be
-remote over ssh or a similar remote protocol.
+remote over ssh or a similar protocol.
 
 The goal is to be able to feed data into improv's stdin along with
 a topology definition and have it do all the rest, returning any
